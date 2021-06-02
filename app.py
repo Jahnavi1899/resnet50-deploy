@@ -26,7 +26,7 @@ def predict(file):
     img = preprocess_input(img)
     prediction = model.predict(img)
     #pred = np.argmax(prediction, axis=1)
-    label = decode_predictions(prediction, top=1)[0]
+    label = decode_predictions(prediction, top=3)[0]
     return label
 
 
